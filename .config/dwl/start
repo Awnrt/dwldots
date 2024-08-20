@@ -18,6 +18,7 @@ export SDL_VIDEODRIVER=wayland
 export CLUTTER_BACKEND=wayland
 export ELECTRON_OZONE_PLATFORM_HINT=auto
 export EDITOR=nvim
+export SUDO=doas
 
 dbus-run-session dwl -s 'pipewire &  
         pipewire-pulse &
@@ -25,4 +26,5 @@ dbus-run-session dwl -s 'pipewire &
         swaybg -i /mnt/ssd/papes/thiemeyer_road_to_samarkand.jpg & 
         wlr-randr --output DP-3 --mode 2560x1440@239.998001
         wlr-randr --output DP-2 --mode 2560x1440@165
+        mako &
 '
