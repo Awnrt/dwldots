@@ -1,6 +1,8 @@
 #dwl deps
 wlroots
 xdg-desktop-portal-wlr
+fcft
+tllist
 
 #sound
 pipewire
