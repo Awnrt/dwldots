@@ -28,7 +28,7 @@ git clone https://codeberg.org/awy/gruvbox-gtk-theme
 git clone https://codeberg.org/awy/Adwaita-old
 doas -u $PERMUSER cp -r $WORKDIRECTORY/gruvbox-gtk-theme/Gruvbox-Dark /home/$PERMUSER/.local/share/themes
 doas -u $PERMUSER cp -r $WORKDIRECTORY/gruvbox-gtk-theme/Gruvbox-Icons /home/$PERMUSER/.local/share/icons
-doas -u $PERMUSER cp -r $WORKDIRECTORY/gruvbox-gtk-theme/Adwaita-old /home/$PERMUSER/.local/share/icons
+doas -u $PERMUSER cp -r $WORKDIRECTORY/Adwaita-old /home/$PERMUSER/.local/share/icons
 rm -rf $WORKDIRECTORY/gruvbox-gtk-theme
 rm -rf $WORKDIRECTORY/Adwaita-old
 

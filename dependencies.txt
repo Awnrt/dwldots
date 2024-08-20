@@ -3,6 +3,7 @@ wlroots
 xdg-desktop-portal-wlr
 fcft
 tllist
+pkgconf
 
 #sound
 pipewire
