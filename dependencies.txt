@@ -1,5 +1,6 @@
 #dwl deps
 wlroots
+wayland-protocols
 xdg-desktop-portal-wlr
 fcft
 tllist
