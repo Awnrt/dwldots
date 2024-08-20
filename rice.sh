@@ -47,6 +47,12 @@ doas -u $PERMUSER git clone https://codeberg.org/awy/someblocks
 cd someblocks
 make clean install
 cd $WORKDIRECTORY
+doas -u $PERMUSER git clone https://github.com/zdharma-continuum/fast-syntax-highlighting
+mkdir -p /usr/share/zsh/plugins
+cp -rf fast-syntax-highlighting /usr/share/zsh/plugins
 cd ..
 rm -rf dwldots
+
+chsh -s /bin/zsh $PERMUSER
+
 echo "Your linux is riced!"
