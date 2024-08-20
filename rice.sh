@@ -43,6 +43,10 @@ doas -u $PERMUSER git clone https://codeberg.org/awy/dwl
 cd dwl
 make clean install
 cd $WORKDIRECTORY
+doas -u $PERMUSER git clone https://codeberg.org/awy/someblocks
+cd someblocks
+make clean install
+cd $WORKDIRECTORY
 cd ..
 rm -rf dwldots
 echo "Your linux is riced!"
