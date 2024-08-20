@@ -38,4 +38,5 @@ ffmpegthumbnailer
 mediainfo
 bat
 chafa
-
+mpd
+ncmpcpp
