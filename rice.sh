@@ -39,6 +39,10 @@ doas -u $PERMUSER dbus-launch gsettings set org.gnome.desktop.interface cursor-t
 doas -u $PERMUSER dbus-launch gsettings set org.gnome.desktop.interface font-name "Libertinus Serif 12"
 
 cd $WORKDIRECTORY
+doas -u $PERMUSER git clone https://codeberg.org/awy/dwl
+cd dwl
+make clean install
+cd $WORKDIRECTORY
 cd ..
 rm -rf dwldots
 echo "Your linux is riced!"
