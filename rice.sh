@@ -40,5 +40,5 @@ doas -u $PERMUSER dbus-launch gsettings set org.gnome.desktop.interface font-nam
 
 cd $WORKDIRECTORY
 cd ..
-rm -rf hyprdots
+rm -rf dwldots
 echo "Your linux is riced!"
