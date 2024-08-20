@@ -1,0 +1,25 @@
+set ifs "\n"
+set icons
+set sixel true
+set cleaner ~/.config/lf/cleaner
+set previewer ~/.config/lf/scope
+
+cmd open ${{
+  case $(file --mime-type "$(readlink -f $f)" -b) in
+    text/*|application/json|inode/x-empty|application/x-subrip) $EDITOR $fx;;
+    video/*) setsid -f mpv $f -quiet >/dev/null 2>&1 ;;
+    audio/*|video/x-ms-asf) mpv --audio-display=no $f ;;
+    *) for f in $fx; do setsid -f $OPENER $f >/dev/null 2>&1; done;;
+  esac
+}}
+
+cmd delete ${{
+	clear; tput cup $(($(tput lines)/3)); tput bold
+	set -f
+	printf "%s\n\t" "$fx"
+	printf "delete?[y/N]"
+	read ans
+	[ $ans = "y" ] && rm -rf -- $fx
+}}
+
+map D delete

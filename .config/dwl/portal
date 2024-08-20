@@ -1,0 +1,5 @@
+sleep 1
+killall xdg-desktop-portal-wlr
+killall xdg-desktop-portal
+/lib/xdg-desktop-portal-wlr &
+
