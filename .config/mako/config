@@ -6,7 +6,7 @@ text-color=#eeeeee
 border-color=#005577
 progress-color=over #222222
 border-radius=0
-font=LiterationMono Nerd Font
+font=mono
 default-timeout=5000
 
 [urgency=high]
