@@ -5,6 +5,7 @@ xdg-desktop-portal-wlr
 fcft
 tllist
 pkgconf
+wmenu
 
 #sound
 pipewire
