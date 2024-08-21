@@ -41,8 +41,11 @@ mediainfo
 bat
 chafa
 mpd
+mpd-openrc
 ncmpcpp
 
 #utilities
 gnupg
 openssh-openrc
+fakeroot
+btop
