@@ -53,10 +53,10 @@ cp -rf fast-syntax-highlighting /usr/share/zsh/plugins
 cd ..
 rm -rf dwldots
 
-mkdir -p /home/$PERMUSER/.ssh
-mkdir -p /home/$PERMUSER/.gnupg
-echo 'Match host * exec "gpg-connect-agent UPDATESTARTUPTTY /bye"' > /home/$PERMUSER/.ssh/config
-echo 'enable-ssh-support' > /home/$PERMUSER/.gnupg/gpg-agent.conf
+doas -u $PERMUSER mkdir -p /home/$PERMUSER/.ssh
+doas -u $PERMUSER mkdir -p /home/$PERMUSER/.gnupg
+doas -u $PERMUSER echo 'Match host * exec "gpg-connect-agent UPDATESTARTUPTTY /bye"' > /home/$PERMUSER/.ssh/config
+doas -u $PERMUSER echo 'enable-ssh-support' > /home/$PERMUSER/.gnupg/gpg-agent.conf
 rc-update add sshd default
 rc-service sshd start
 
