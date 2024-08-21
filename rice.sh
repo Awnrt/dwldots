@@ -53,6 +53,13 @@ cp -rf fast-syntax-highlighting /usr/share/zsh/plugins
 cd ..
 rm -rf dwldots
 
+mkdir -p /home/$PERMUSER/.ssh
+mkdir -p /home/$PERMUSER/.gnupg
+echo 'Match host * exec "gpg-connect-agent UPDATESTARTUPTTY /bye"' > /home/$PERMUSER/.ssh/config
+echo 'enable-ssh-support' > /home/$PERMUSER/.gnupg/gpg-agent.conf
+rc-update add sshd default
+rc-service sshd start
+
 chsh -s /bin/zsh $PERMUSER
 
 echo "Your linux is riced!"
