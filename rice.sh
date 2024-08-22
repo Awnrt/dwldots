@@ -12,6 +12,7 @@ pacman -S $DEPLIST --noconfirm
 
 usermod -aG seat,input,audio,video $PERMUSER
 doas -u $PERMUSER cp -r $WORKDIRECTORY/.config /home/$PERMUSER
+doas -u $PERMUSER cp -r $WORKDIRECTORY/.local /home/$PERMUSER
 doas -u $PERMUSER cp -a $WORKDIRECTORY/.zprofile /home/$PERMUSER
 doas -u $PERMUSER touch /home/$PERMUSER/.config/mpd/mpd.db 
 doas -u $PERMUSER touch /home/$PERMUSER/.config/mpd/mpd.log
@@ -61,5 +62,13 @@ rc-update add sshd default
 rc-service sshd start
 
 chsh -s /bin/zsh $PERMUSER
+
+mkdir -p /root/.config/nvim
+cat <<EOL >> /root/.config/nvim/init.vim
+set title
+set clipboard+=unnamedplus
+set relativenumber
+colorscheme vim
+EOL
 
 echo "Your linux is riced!"

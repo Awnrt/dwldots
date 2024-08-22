@@ -1,3 +1,4 @@
+export PATH="$PATH:$(find ~/.local/bin -type d | paste -sd ':' -)"
 export ZDOTDIR="$HOME/.config/zsh"
 export TERM=foot
 gpg-connect-agent updatestartuptty /bye >/dev/null
