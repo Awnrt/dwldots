@@ -44,6 +44,10 @@ doas -u $PERMUSER git clone https://codeberg.org/awy/dwl
 cd dwl
 make clean install
 cd $WORKDIRECTORY
+doas -u $PERMUSER git clone https://codeberg.org/awy/dwlb
+cd dwlb
+make clean install
+cd $WORKDIRECTORY
 doas -u $PERMUSER git clone https://codeberg.org/awy/someblocks
 cd someblocks
 make clean install
