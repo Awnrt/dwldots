@@ -20,6 +20,7 @@ doas -u $PERMUSER touch /home/$PERMUSER/.config/mpd/mpd.pid
 doas -u $PERMUSER touch /home/$PERMUSER/.config/mpd/mpdstate 
 
 doas -u $PERMUSER mkdir -p /home/$PERMUSER/.cache/lf
+doas -u $PERMUSER mkdir -p /home/$PERMUSER/.cache/zsh
 doas -u $PERMUSER mkdir -p /home/$PERMUSER/.local/share/themes
 doas -u $PERMUSER mkdir -p /home/$PERMUSER/.local/share/icons
 doas -u $PERMUSER mkdir -p /home/$PERMUSER/.local/share/papes
