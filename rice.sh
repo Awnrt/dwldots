@@ -33,11 +33,11 @@ doas -u $PERMUSER dbus-launch gsettings set org.gnome.desktop.wm.preferences but
 #doas -u $PERMUSER dbus-launch gsettings set org.gnome.desktop.interface font-name "Libertinus Serif 12"
 
 cd $WORKDIRECTORY
-doas -u $PERMUSER git clone https://codeberg.org/awy/dwl
+doas -u $PERMUSER git clone https://github.com/awnrt/dwl
 cd dwl
 make clean install
 cd $WORKDIRECTORY
-doas -u $PERMUSER git clone https://codeberg.org/awy/someblocks
+doas -u $PERMUSER git clone https://github.com/awnrt/someblocks
 cd someblocks
 make clean install
 cd $WORKDIRECTORY
@@ -50,7 +50,7 @@ rm -rf dwldots
 doas -u $PERMUSER mkdir -p /home/$PERMUSER/.ssh
 doas -u $PERMUSER mkdir -p /home/$PERMUSER/.gnupg
 doas -u $PERMUSER touch /home/$PERMUSER/.ssh/config
-doas -u $PERMUSER touch /home/.gnupg/gpg-agent.conf
+doas -u $PERMUSER touch /home/$PERMUSER/.gnupg/gpg-agent.conf
 echo 'Match host * exec "gpg-connect-agent UPDATESTARTUPTTY /bye"' > /home/$PERMUSER/.ssh/config
 echo 'enable-ssh-support' > /home/$PERMUSER/.gnupg/gpg-agent.conf
 rc-update add sshd default
