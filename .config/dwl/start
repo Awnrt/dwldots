@@ -21,10 +21,7 @@ export ELECTRON_OZONE_PLATFORM_HINT=auto
 export EDITOR=nvim
 export SUDO=doas
 
-dbus-run-session dwl -s 'pipewire &  
-        dwlb &
-        sleep 0.1
-        someblocks -p | dwlb -status-stdin all &
+someblocks -p | dbus-run-session dwl -s 'pipewire &  
         pipewire-pulse &
         wireplumber &
         swaybg -i /mnt/ssd/papes/thiemeyer_road_to_samarkand.jpg & 
