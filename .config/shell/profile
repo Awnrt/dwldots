@@ -1,9 +1,5 @@
 export PATH="$PATH:$(find ~/.local/bin -type d | paste -sd ':' -)"
 export ZDOTDIR="$HOME/.config/zsh"
 export TERM=foot
-gpg-connect-agent updatestartuptty /bye >/dev/null
-unset SSH_AGENT_PID
-if [ "${gnupg_SSH_AUTH_SOCK_by:-0}" -ne $$ ]; then
-  export SSH_AUTH_SOCK="$(gpgconf --list-dirs agent-ssh-socket)"
-fi
+
 [ "$(tty)" = "/dev/tty1" ] && ! pidof -s dwl >/dev/null 2>&1 && exec "$HOME/.config/dwl/start"
