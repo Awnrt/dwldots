@@ -1,7 +1,9 @@
+#!/bin/sh
+
 WORKDIRECTORY=$PWD
 PERMUSER="awy"
 
-if [ "$EUID" -ne 0 ]
+if [ "$(id -u)" -ne 0 ]
   then printf "The script has to be run as root.\n"
   exit
 fi
