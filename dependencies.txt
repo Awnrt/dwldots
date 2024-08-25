@@ -32,7 +32,6 @@ slurp
 zsh
 mpv
 yt-dlp
-fastfetch
 mako
 unzip
 imv
@@ -42,9 +41,6 @@ ffmpegthumbnailer
 mediainfo
 bat
 chafa
-mpd
-mpd-openrc
-ncmpcpp
 
 #utilities
 gnupg

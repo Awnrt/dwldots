@@ -14,10 +14,6 @@ usermod -aG seat,input,audio,video $PERMUSER
 doas -u $PERMUSER cp -r $WORKDIRECTORY/.config /home/$PERMUSER
 doas -u $PERMUSER cp -r $WORKDIRECTORY/.local /home/$PERMUSER
 doas -u $PERMUSER cp -a $WORKDIRECTORY/.zprofile /home/$PERMUSER
-doas -u $PERMUSER touch /home/$PERMUSER/.config/mpd/mpd.db 
-doas -u $PERMUSER touch /home/$PERMUSER/.config/mpd/mpd.log
-doas -u $PERMUSER touch /home/$PERMUSER/.config/mpd/mpd.pid 
-doas -u $PERMUSER touch /home/$PERMUSER/.config/mpd/mpdstate 
 
 doas -u $PERMUSER mkdir -p /home/$PERMUSER/.cache/lf
 doas -u $PERMUSER mkdir -p /home/$PERMUSER/.cache/zsh
@@ -34,7 +30,7 @@ rm -rf $WORKDIRECTORY/gruvbox-gtk-theme
 doas -u $PERMUSER dbus-launch gsettings set org.gnome.desktop.interface gtk-theme "Gruvbox-Dark"
 doas -u $PERMUSER dbus-launch gsettings set org.gnome.desktop.interface icon-theme "Gruvbox-Icons"
 doas -u $PERMUSER dbus-launch gsettings set org.gnome.desktop.wm.preferences button-layout 'appmenu'
-doas -u $PERMUSER dbus-launch gsettings set org.gnome.desktop.interface font-name "Libertinus Serif 12"
+#doas -u $PERMUSER dbus-launch gsettings set org.gnome.desktop.interface font-name "Libertinus Serif 12"
 
 cd $WORKDIRECTORY
 doas -u $PERMUSER git clone https://codeberg.org/awy/dwl
