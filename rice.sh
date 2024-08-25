@@ -24,7 +24,7 @@ doas -u $PERMUSER mkdir -p /home/$PERMUSER/.local/share/icons
 doas -u $PERMUSER mkdir -p /home/$PERMUSER/.local/share/papes
 
 cd $WORKDIRECTORY
-git clone https://codeberg.org/awy/gruvbox-gtk-theme
+git clone https://github.com/awnrt/gruvbox-gtk-theme
 doas -u $PERMUSER cp -r $WORKDIRECTORY/gruvbox-gtk-theme/Gruvbox-Dark /home/$PERMUSER/.local/share/themes
 doas -u $PERMUSER cp -r $WORKDIRECTORY/gruvbox-gtk-theme/Gruvbox-Icons /home/$PERMUSER/.local/share/icons
 rm -rf $WORKDIRECTORY/gruvbox-gtk-theme
