@@ -6,6 +6,7 @@ fcft
 tllist
 pkgconf
 wmenu
+xorg-xwayland
 
 #sound
 pipewire
