@@ -68,4 +68,7 @@ set relativenumber
 colorscheme vim
 EOL
 
+sed -i -e "/^#"Color"/s/^#//" /etc/pacman.conf
+sed -i -e '/Color/a\ILoveCandy' /etc/pacman.conf
+
 echo "Your linux is riced!"
