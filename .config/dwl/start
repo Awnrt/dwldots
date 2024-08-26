@@ -40,4 +40,5 @@ dbus-run-session dwl -s 'pipewire &
         $HOME/.config/dwl/portal &
         mako &
 ' < $XDG_RUNTIME_DIR/statuspipe
+killall someblocks
 rm $XDG_RUNTIME_DIR/statuspipe
