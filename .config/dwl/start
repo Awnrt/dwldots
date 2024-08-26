@@ -34,7 +34,8 @@ someblocks -p > $XDG_RUNTIME_DIR/statuspipe &
 dbus-run-session dwl -s 'pipewire &  
         pipewire-pulse &
         wireplumber &
-        swaybg -i /mnt/ssd/papes/thiemeyer_road_to_samarkand.jpg & 
+        swaybg -o DP-2 -i /mnt/ssd/papes/wallhaven-wegw36_2560x1440.png &
+        swaybg -o DP-3 -i /mnt/ssd/papes/wallhaven-3lv8j6_2560x1440.png & 
         wlr-randr --output DP-3 --mode 2560x1440@239.998001
         wlr-randr --output DP-2 --mode 2560x1440@165
         $HOME/.config/dwl/portal &
